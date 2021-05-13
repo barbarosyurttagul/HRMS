@@ -1,0 +1,1 @@
+INSERT INTO jobtitles (title) VALUES ('Software Developer')
