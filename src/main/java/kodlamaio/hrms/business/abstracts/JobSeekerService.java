@@ -9,5 +9,6 @@ public interface JobSeekerService {
 void add(JobSeeker jobSeeker);
 	
 	List<JobSeeker> getAll();
+	boolean verifyJobSeekerNationalIdentity(JobSeeker jobSeeker);
 
 }
