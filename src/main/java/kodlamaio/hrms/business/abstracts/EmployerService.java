@@ -2,11 +2,13 @@ package kodlamaio.hrms.business.abstracts;
 
 import java.util.List;
 
+import kodlamaio.hrms.core.utilities.results.DataResult;
+import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.Employer;
 
 public interface EmployerService {
-	
-	void add(Employer employer);
-	
-	List<Employer> getAll();
+
+	Result register(Employer employer);
+	DataResult<List<Employer>> getAll();
+	Result activateAccountBySystemUser(int id);
 }
