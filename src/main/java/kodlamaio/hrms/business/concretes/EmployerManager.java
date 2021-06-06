@@ -34,10 +34,10 @@ public class EmployerManager implements EmployerService{
 		if(!Utility.validateEmail(employer.getEmail())) 
 			return new ErrorResult("Geçerli bir email girmediniz");
 		
-		if(emailAndWebUrlMatches(employer.getEmail(), employer.getWebUrl()))
+		if(!emailAndWebUrlMatches(employer.getEmail(), employer.getWebUrl()))
 			return new ErrorResult("Email ile Web adresiniz uyumlu değil");
 		
-		if(emailExists(employer.getEmail())) 
+		if(!emailExists(employer.getEmail())) 
 			return new ErrorResult("Bu email ile daha önce kaydolunmuş");
 			
 		if(!employer.getCompanyName().isEmpty() &&
@@ -71,6 +71,7 @@ public class EmployerManager implements EmployerService{
 		
 	private Boolean emailAndWebUrlMatches(String email, String webUrl) {
 		String[] emailSplit = email.split("@");
+		
 		if(webUrl.contains(emailSplit[1])) {
 			return true;
 		}

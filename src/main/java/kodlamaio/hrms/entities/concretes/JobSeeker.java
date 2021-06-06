@@ -21,25 +21,25 @@ public class JobSeeker {
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="firstname")
+	@Column(name="firstname", nullable = false)
 	private String firstName;
 	
-	@Column(name="lastname")
+	@Column(name="lastname", nullable = false)
 	private String lastName;
 	
-	@Column(name="nationalidentity")
+	@Column(name="nationalidentity", nullable = false)
 	private String nationalIdentity;
 	
-	@Column(name="birthyear")
+	@Column(name="birthyear", nullable = false)
 	private String birthYear;
 	
-	@Column(name="email")
+	@Column(name="email", nullable = false)
 	private String email;
 	
-	@Column(name="password")
+	@Column(name="password", nullable = false)
 	private String password;
 	
-	@Column(name="verifiedbyemail")
+	@Column(name="verifiedbyemail", nullable = false)
 	private Boolean verifiedByEmail;
 
 }

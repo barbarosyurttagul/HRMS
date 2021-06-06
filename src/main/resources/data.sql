@@ -1,0 +1,21 @@
+INSERT INTO employers (companyname, email, password, phone, verifiedbyemail, verifiedbysystemuser, weburl ) VALUES
+  ('Tüpraş', 'hr@tupras.com', '1234', '031211122222', true, true, 'www.tupras.com'),
+  ('Petkim', 'hr@petkim.com', '1234', '031211122222', true, true, 'www.petkim.com');
+  
+INSERT INTO jobtitles (title) VALUES
+  ('Software Developer'),
+  ('Software Architect');  
+  
+INSERT INTO jobseekers (firstname, lastname, nationalidentity, birthyear, email, password, verifiedbyemail ) VALUES
+  ('Barbaros', 'Yurttagül', '15452194696', '1981', 'aaa@bbb.com', '1234', true),
+  ('Ogeday', 'Yurttagül', '15452194697', '1982', 'bbb@bbb.com', '1234', true); 
+  
+INSERT INTO cities (name) VALUES ('Ankara'), ('İzmir'), ('İstanbul');  
+  
+INSERT INTO jobs (description, vacantposition, deadline, releasedate, minsalary, maxsalary, employer_id, jobtitle_id, city_id, valid) 
+VALUES ('AAA', 2, NOW(), NOW(), 5000, 7500, 1, 1, 1, true),
+	   ('açıklama', 4, '2021-06-03 18:54:07.184459', '2021-06-09 18:54:07.184459', 3500, 7500, 2, 2, 2, false),
+	   ('Java bilmelidir', 6, '2021-06-05 18:54:07.184459', '2021-06-13 18:54:07.184459', 6500, 9500, 1, 2, 3, true);
+	   
+	   
+	   

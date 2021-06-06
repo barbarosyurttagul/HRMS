@@ -14,14 +14,14 @@ import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.core.utilities.results.SuccessResult;
 import kodlamaio.hrms.entities.concretes.JobSeeker;
 
-@RequestMapping("/api/jobseekers")
+@RequestMapping("/api/jobseekers/")
 @RestController
-public class JobSeekersControllers {
+public class JobSeekersController {
 
 	private JobSeekerService jobSeekerService;
 
 	@Autowired
-	public JobSeekersControllers(JobSeekerService jobSeekerService) {
+	public JobSeekersController(JobSeekerService jobSeekerService) {
 		super();
 		this.jobSeekerService = jobSeekerService;
 	}
