@@ -7,10 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,20 +21,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "jobtitles")
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "jobs"})
-public class JobTitle {
-	
+@Table(name = "socialaccounttypes")
+public class SocialAccountType {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "jobtitle_id")
-	private int jobtitleId;
+	@Column(name = "socialaccounttype_id")
+	private int socialAccountType_id;
 	
-	@Column(name = "title", nullable = false)
-	private String title;
+	@Column(name = "socialaccounttypename")
+	private String socialAccountTypeName;
 	
-	@OneToMany(mappedBy = "jobTitle")
-	private List<Job> jobs;
+	@JsonIgnore
+	@OneToMany(mappedBy = "socialAccountType")
+	private List<JobSeekerSocialAccount> jobSeekerSocialAccounts;
 	
-}
 
+}

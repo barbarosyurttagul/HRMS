@@ -17,5 +17,22 @@ VALUES ('AAA', 2, NOW(), NOW(), 5000, 7500, 1, 1, 1, true),
 	   ('açıklama', 4, '2021-06-03 18:54:07.184459', '2021-06-09 18:54:07.184459', 3500, 7500, 2, 2, 2, false),
 	   ('Java bilmelidir', 6, '2021-06-05 18:54:07.184459', '2021-06-13 18:54:07.184459', 6500, 9500, 1, 2, 3, true);
 	   
+INSERT INTO jobseekereducations (school, startyear, endyear, fieldofstudy, jobseeker_id) 
+VALUES ('Deniz Harp Okulu', 1999, 2003, 'Bilgisayar Müh.', 1),
+       ('Beykent Üniversitesi', 2005, 2007, 'Yönetim ve Organizasyon', 1);
+       
+INSERT INTO socialaccounttypes (socialaccounttypename) 
+VALUES ('Github'),
+	   ('Linkedin');
+	   
+INSERT INTO jobseekersocialaccounts (socialaccounturl, jobseeker_id, socialaccounttype_id)
+VALUES ('https://github.com/barbarosyurttagul', 1, 1),
+	   ('https://linkedin.com/barbarosyurttagul', 1, 2)
+
+
+
+       
+
+	   
 	   
 	   
