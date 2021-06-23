@@ -13,7 +13,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -52,30 +54,42 @@ public class JobSeeker {
 	
 	@OneToMany(mappedBy = "jobSeeker")
 	@JsonIgnore
+	@JsonManagedReference
 	private List<JobSeekerEducation> jobSeekerEducations;
 	
 	@OneToMany(mappedBy = "jobSeeker")
 	@JsonIgnore
+	@JsonManagedReference
 	private List<JobSeekerExperience> jobSeekerExperiences;
 	
 	@OneToMany(mappedBy = "jobSeeker")
 	@JsonIgnore
+	@JsonManagedReference
 	private List<JobSeekerForeignLanguage> jobSeekerForeignLanguages;
 	
 	@OneToMany(mappedBy = "jobSeeker")
 	@JsonIgnore
+	@JsonManagedReference
 	private List<JobSeekerSkill> jobSeekerSkills;
 	
 	@OneToMany(mappedBy = "jobSeeker")
 	@JsonIgnore
+	@JsonManagedReference
 	private List<JobSeekerSocialAccount> jobSeekerSocialAccounts;
+	
+	@OneToMany(mappedBy = "jobSeeker")
+	@JsonIgnore
+	@JsonManagedReference
+	private List<CurriculumVitae> curriculumVitaes;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "picture_id", referencedColumnName = "jobseekerpicture_id")
+	@JsonBackReference
 	private JobSeekerPicture jobSeekerPicture;
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "about_id", referencedColumnName = "jobseekerabout_id")
+	@JsonBackReference
 	private JobSeekerAbout jobSeekerAbout;
 
 }

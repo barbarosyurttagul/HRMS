@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -13,23 +14,26 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "jobseekerpicture")
-public class JobSeekerPicture {
+@Table(name = "curriculumvitaes")
+public class CurriculumVitae {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "jobseekerpicture_id")
-	private int jobSeekerPicture_id;
+	@Column(name = "curriculumvitae_id")
+	private int curriculumVitaeId;
 	
-	@Column(name = "pictureurl", nullable = false)
-	private String pictureUrl;
-		
-	@OneToOne(mappedBy = "jobSeekerPicture")
+	@Column(name = "cvname")
+	private String cvName;
+	
+	@ManyToOne()
 	@JsonBackReference
+	@JoinColumn(name = "jobseeker_id")
+	@ToString.Exclude
 	private JobSeeker jobSeeker;
 }

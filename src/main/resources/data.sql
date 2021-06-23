@@ -21,13 +21,25 @@ INSERT INTO jobseekereducations (school, startyear, endyear, fieldofstudy, jobse
 VALUES ('Deniz Harp Okulu', 1999, 2003, 'Bilgisayar Müh.', 1),
        ('Beykent Üniversitesi', 2005, 2007, 'Yönetim ve Organizasyon', 1);
        
+INSERT INTO jobseekerforeignlanguages (language, level, jobseeker_id)
+VALUES ('English', 5, 1);
+
+INSERT INTO jobseekerskills (skill, jobseeker_id)
+VALUES ('C Sharp', 1),
+	   ('Java', 2);
+       
 INSERT INTO socialaccounttypes (socialaccounttypename) 
 VALUES ('Github'),
 	   ('Linkedin');
 	   
 INSERT INTO jobseekersocialaccounts (socialaccounturl, jobseeker_id, socialaccounttype_id)
 VALUES ('https://github.com/barbarosyurttagul', 1, 1),
-	   ('https://linkedin.com/barbarosyurttagul', 1, 2)
+	   ('https://linkedin.com/barbarosyurttagul', 1, 2);
+	   
+INSERT INTO curriculumvitaes (cvname, jobseeker_id) 
+VALUES ('SOFTWARE', 1),
+	   ('YAZILIM', 2);	   
+	   
 
 
 

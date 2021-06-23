@@ -9,9 +9,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @NoArgsConstructor
@@ -38,8 +41,9 @@ public class JobSeekerExperience {
 	private int endYear;
 	
 	@ManyToOne()
+	@JsonBackReference
 	@JoinColumn(name = "jobseeker_id")
+	@ToString.Exclude
 	private JobSeeker jobSeeker;
-	
 	
 }

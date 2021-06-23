@@ -27,7 +27,7 @@ public class HrmsApplication {
 //		Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
 //				"cloud_name", "barbaros",
 //				"api_key", "947515351467593",
-//				"api_secret", "iLbDZjBDX-dfTt5fsw5M1kGVros"));
+//				"api_secret", "********************"));
 //		
 //		File file = new File("my_image.jpg");
 //		Map uploadResult = cloudinary.uploader().upload(file, ObjectUtils.emptyMap());

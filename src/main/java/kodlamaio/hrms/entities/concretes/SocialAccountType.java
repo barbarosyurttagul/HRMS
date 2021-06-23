@@ -12,6 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,6 +35,7 @@ public class SocialAccountType {
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "socialAccountType")
+	@JsonManagedReference
 	private List<JobSeekerSocialAccount> jobSeekerSocialAccounts;
 	
 
