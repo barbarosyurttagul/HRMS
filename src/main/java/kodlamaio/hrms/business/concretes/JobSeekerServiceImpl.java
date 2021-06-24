@@ -17,12 +17,12 @@ import kodlamaio.hrms.dataAccess.abstracts.JobSeekerRepository;
 import kodlamaio.hrms.entities.concretes.JobSeeker;
 
 @Service
-public class JobSeekerManager implements JobSeekerService{
+public class JobSeekerServiceImpl implements JobSeekerService{
 
 	private JobSeekerRepository jobSeeekerRepository;
 	
 	@Autowired
-	public JobSeekerManager(JobSeekerRepository jobSeeekerRepository) {
+	public JobSeekerServiceImpl(JobSeekerRepository jobSeeekerRepository) {
 		super();
 		this.jobSeeekerRepository = jobSeeekerRepository;
 	}

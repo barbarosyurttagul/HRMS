@@ -10,12 +10,12 @@ import kodlamaio.hrms.dataAccess.abstracts.JobSeekerForeignLanguageRepository;
 import kodlamaio.hrms.entities.concretes.JobSeekerForeignLanguage;
 
 @Service
-public class JobSeekerForeignLanguageManager implements JobSeekerForeignLanguageService {
+public class JobSeekerForeignLanguageServiceImpl implements JobSeekerForeignLanguageService {
 
 	private JobSeekerForeignLanguageRepository repository;
 	
 	@Autowired
-	public JobSeekerForeignLanguageManager(JobSeekerForeignLanguageRepository repository) {
+	public JobSeekerForeignLanguageServiceImpl(JobSeekerForeignLanguageRepository repository) {
 		super();
 		this.repository = repository;
 	}

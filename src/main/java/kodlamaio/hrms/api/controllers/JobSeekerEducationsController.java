@@ -1,12 +1,16 @@
 package kodlamaio.hrms.api.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaio.hrms.business.abstracts.JobSeekerEducationService;
+import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
 import kodlamaio.hrms.entities.concretes.JobSeekerEducation;
 
@@ -25,6 +29,11 @@ public class JobSeekerEducationsController {
 	@PostMapping("add")
 	public Result add(@RequestBody JobSeekerEducation education) {
 		return this.service.add(education);
+	}
+	
+	@GetMapping("getallsortedbyjobseekerid")
+	DataResult<List<JobSeekerEducation>> getAllSorted(int jobSeekerId){
+		return this.service.getAllSortedByJobSeekerId(jobSeekerId);
 	}
 	
 }

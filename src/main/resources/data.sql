@@ -21,6 +21,9 @@ INSERT INTO jobseekereducations (school, startyear, endyear, fieldofstudy, jobse
 VALUES ('Deniz Harp Okulu', 1999, 2003, 'Bilgisayar Müh.', 1),
        ('Beykent Üniversitesi', 2005, 2007, 'Yönetim ve Organizasyon', 1);
        
+INSERT INTO jobseekereducations (school, startyear, fieldofstudy, jobseeker_id) 
+VALUES ('Java Kamp', 2021, 'Java Developer', 1);
+       
 INSERT INTO jobseekerforeignlanguages (language, level, jobseeker_id)
 VALUES ('English', 5, 1);
 
@@ -38,7 +41,18 @@ VALUES ('https://github.com/barbarosyurttagul', 1, 1),
 	   
 INSERT INTO curriculumvitaes (cvname, jobseeker_id) 
 VALUES ('SOFTWARE', 1),
-	   ('YAZILIM', 2);	   
+	   ('YAZILIM', 2);	
+	   
+INSERT INTO jobseekerexperiences (company, position, startyear, endyear, jobseeker_id)
+VALUES ('Softtech', 'Junior Developer', 2005, 2008, 1),
+	   ('Havelsan', 'Middle Developer', 2008, 2009, 1);
+	   
+INSERT INTO jobseekerexperiences (company, position, startyear, jobseeker_id)
+VALUES ('Softtech', 'Junior Developer', 2009, 1);
+
+INSERT INTO jobseekerexperiences (company, position, startyear, endyear, jobseeker_id)
+VALUES ('Softtech', 'Junior Developer', 2005, 2008, 2),
+	   ('Havelsan', 'Middle Developer', 2008, 2009, 2);
 	   
 
 

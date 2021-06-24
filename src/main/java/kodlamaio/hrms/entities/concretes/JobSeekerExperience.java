@@ -37,8 +37,10 @@ public class JobSeekerExperience {
 	@Column(name = "startyear", nullable = false)
 	private int startYear;
 	
+	//Since the sorting gives null error for null columns, I used a non-primitive wrapper type (Integer instead of int)
+		//https://stackoverflow.com/questions/3154582/why-do-i-get-a-null-value-was-assigned-to-a-property-of-primitive-type-setter-o
 	@Column(name = "endyear")
-	private int endYear;
+	private Integer endYear;
 	
 	@ManyToOne()
 	@JsonBackReference

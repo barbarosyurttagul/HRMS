@@ -14,12 +14,12 @@ import kodlamaio.hrms.dataAccess.abstracts.JobRepository;
 import kodlamaio.hrms.entities.concretes.Job;
 
 @Service
-public class JobManager implements JobService{
+public class JobServiceImpl implements JobService{
 
 	private JobRepository jobRepository;
 	
 	@Autowired
-	public JobManager(JobRepository jobRepository) {
+	public JobServiceImpl(JobRepository jobRepository) {
 		super();
 		this.jobRepository = jobRepository;
 	}

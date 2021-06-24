@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import kodlamaio.hrms.entities.concretes.SystemUser;
 
-public interface SystemUserDao extends JpaRepository<SystemUser, Integer>{
+public interface SystemUserRepository extends JpaRepository<SystemUser, Integer>{
 
 }

@@ -17,12 +17,12 @@ import kodlamaio.hrms.dataAccess.abstracts.EmployerRepository;
 import kodlamaio.hrms.entities.concretes.Employer;
 
 @Service
-public class EmployerManager implements EmployerService{
+public class EmployerServiceImpl implements EmployerService{
 
 	private EmployerRepository employerRepository;
 	
 	@Autowired
-	public EmployerManager(EmployerRepository employerRepository) {
+	public EmployerServiceImpl(EmployerRepository employerRepository) {
 		super();
 		this.employerRepository = employerRepository;
 	}
